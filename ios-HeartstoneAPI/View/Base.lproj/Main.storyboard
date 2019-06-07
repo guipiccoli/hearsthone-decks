@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ios_HeartstoneAPI" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="MQN-5Z-3hZ">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="hlH-Nn-rKM">
+                                    <size key="itemSize" width="181" height="268"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="HY9-G7-l7j" customClass="CardCollectionViewCell" customModule="ios_HeartstoneAPI" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="181" height="268"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="181" height="268"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="qlF-nP-dFf">
+                                                    <rect key="frame" x="80.5" y="124" width="20" height="20"/>
+                                                </activityIndicatorView>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OJI-EA-qfx">
+                                                    <rect key="frame" x="0.0" y="0.0" width="181" height="268"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </imageView>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="qlF-nP-dFf" firstAttribute="centerX" secondItem="HY9-G7-l7j" secondAttribute="centerX" id="3Dr-Ep-T9f"/>
+                                            <constraint firstAttribute="bottom" secondItem="OJI-EA-qfx" secondAttribute="bottom" id="A1b-XB-BOj"/>
+                                            <constraint firstItem="qlF-nP-dFf" firstAttribute="centerY" secondItem="HY9-G7-l7j" secondAttribute="centerY" id="ReG-de-Egc"/>
+                                            <constraint firstAttribute="trailing" secondItem="OJI-EA-qfx" secondAttribute="trailing" id="Z5p-3d-QsC"/>
+                                            <constraint firstItem="OJI-EA-qfx" firstAttribute="top" secondItem="HY9-G7-l7j" secondAttribute="top" id="kqy-fL-zAz"/>
+                                            <constraint firstItem="OJI-EA-qfx" firstAttribute="leading" secondItem="HY9-G7-l7j" secondAttribute="leading" id="sZd-n2-CR6"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="cardImageView" destination="OJI-EA-qfx" id="pWQ-vR-wEL"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="MQN-5Z-3hZ" secondAttribute="trailing" id="2rj-PS-YyE"/>
+                            <constraint firstItem="MQN-5Z-3hZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="AFF-FV-XOg"/>
+                            <constraint firstItem="MQN-5Z-3hZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Bdd-o8-yXt"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="MQN-5Z-3hZ" secondAttribute="bottom" id="l1q-Im-kFU"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="cardsCollectionView" destination="MQN-5Z-3hZ" id="vc4-FN-ywI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="129.91071428571428"/>
+        </scene>
+    </scenes>
+</document>
