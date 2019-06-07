@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		E740960522A9D7AE000A8F7A /* CardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E740960422A9D7AE000A8F7A /* CardCollectionViewCell.swift */; };
 		E7C98F4222A999B800F97DD4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C98F4122A999B800F97DD4 /* AppDelegate.swift */; };
-		E7C98F4422A999B800F97DD4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C98F4322A999B800F97DD4 /* ViewController.swift */; };
+		E7C98F4422A999B800F97DD4 /* CardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C98F4322A999B800F97DD4 /* CardsViewController.swift */; };
 		E7C98F4722A999B800F97DD4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7C98F4522A999B800F97DD4 /* Main.storyboard */; };
 		E7C98F4A22A999B800F97DD4 /* ios_HeartstoneAPI.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E7C98F4822A999B800F97DD4 /* ios_HeartstoneAPI.xcdatamodeld */; };
 		E7C98F4C22A999B900F97DD4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7C98F4B22A999B900F97DD4 /* Assets.xcassets */; };
@@ -22,7 +22,7 @@
 		E740960422A9D7AE000A8F7A /* CardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionViewCell.swift; sourceTree = "<group>"; };
 		E7C98F3E22A999B800F97DD4 /* ios-HeartstoneAPI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-HeartstoneAPI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7C98F4122A999B800F97DD4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E7C98F4322A999B800F97DD4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E7C98F4322A999B800F97DD4 /* CardsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsViewController.swift; sourceTree = "<group>"; };
 		E7C98F4622A999B800F97DD4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E7C98F4922A999B800F97DD4 /* ios_HeartstoneAPI.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ios_HeartstoneAPI.xcdatamodel; sourceTree = "<group>"; };
 		E7C98F4B22A999B900F97DD4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -56,7 +56,7 @@
 		E740960622AAF972000A8F7A /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				E7C98F4322A999B800F97DD4 /* ViewController.swift */,
+				E7C98F4322A999B800F97DD4 /* CardsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -189,7 +189,7 @@
 			files = (
 				E7C98F4A22A999B800F97DD4 /* ios_HeartstoneAPI.xcdatamodeld in Sources */,
 				E7C98F5B22A9D01800F97DD4 /* DataRequest.swift in Sources */,
-				E7C98F4422A999B800F97DD4 /* ViewController.swift in Sources */,
+				E7C98F4422A999B800F97DD4 /* CardsViewController.swift in Sources */,
 				E7C98F4222A999B800F97DD4 /* AppDelegate.swift in Sources */,
 				E740960522A9D7AE000A8F7A /* CardCollectionViewCell.swift in Sources */,
 				E7C98F5822A999D000F97DD4 /* Card.swift in Sources */,
