@@ -11,8 +11,8 @@ import Foundation
 
 struct DataRequest {
     
-    static func getCards(completionHandler completion: @escaping ([Card]) -> Void) {
-        var request = URLRequest(url: URL(string: "https://omgvamp-hearthstone-v1.p.rapidapi.com/cards/classes/Hunter")!)
+    static func getCards(classCards: String, completionHandler completion: @escaping ([Card]) -> Void) {
+        var request = URLRequest(url: URL(string: "https://omgvamp-hearthstone-v1.p.rapidapi.com/cards/classes/\(classCards)")!)
         request.httpMethod = "GET"
         request.addValue("b71a260f20msh8cd4d6e140729d7p137b7fjsn0c0560e5ef09", forHTTPHeaderField: "X-RapidAPI-Key")
         request.addValue("omgvamp-hearthstone-v1.p.rapidapi.com", forHTTPHeaderField: "X-RapidAPI-Host")

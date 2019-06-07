@@ -19,16 +19,14 @@ class ViewController: UIViewController {
         
         cardsCollectionView.dataSource = self
         
-        DataRequest.getCards { (cards) in
+        DataRequest.getCards(classCards: "Mage") { (cards) in
             self.cards = cards
-           // print(cards)
             
             DispatchQueue.main.async {
                 self.cardsCollectionView.reloadData()
             }
         }
     }
-
 
 }
 
