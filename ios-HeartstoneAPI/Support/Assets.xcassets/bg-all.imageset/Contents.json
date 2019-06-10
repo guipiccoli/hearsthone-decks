@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "idiom" : "universal",
+      "filename" : "blizzardApp_background_hearthstone-b10f6f93fbcb858907dcae8dccaa83508833727f3fc3d2bdebd9770944e4ae64fcd82d1423f835ec3a933bb9bb8f37def8f3996e421640573a068fee4b4a88a5.jpg",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "version" : 1,
+    "author" : "xcode"
+  }
+}

@@ -11,6 +11,7 @@ import UIKit
 class CardsViewController: UIViewController {
 
     var cards : [Card]?
+    var classSelected: String?
     
     @IBOutlet weak var cardsCollectionView: UICollectionView!
     
@@ -19,14 +20,17 @@ class CardsViewController: UIViewController {
         
         cardsCollectionView.dataSource = self
         
-        DataRequest.getCards(classCards: "Mage") { (cards) in
-            self.cards = cards
-            
-            DispatchQueue.main.async {
-                self.cardsCollectionView.reloadData()
+        if classSelected != nil {
+            DataRequest.getCards(classCards: classSelected!) { (cards) in
+                self.cards = cards
+                
+                DispatchQueue.main.async {
+                    self.cardsCollectionView.reloadData()
+                }
             }
         }
     }
+    
 
 }
 
