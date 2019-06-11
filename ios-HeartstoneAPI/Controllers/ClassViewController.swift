@@ -36,6 +36,7 @@ class ClassViewController: UIViewController {
         if let deckList = segue.destination as? CardsViewController {
             if let classSelected = sender as? String {
                 deckList.classSelected = classSelected
+                deckList.title = "\(classSelected) Cards"
             }
         }
         
@@ -59,8 +60,6 @@ extension ClassViewController: UICollectionViewDelegate {
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         guard let collectionView = scrollView as? UICollectionView else {return}
-//        let point = CGPoint(x: collectionView.center.x + collectionView.contentOffset.x, y: collectionView.center.y + collectionView.contentOffset.y)
-//        let index = collectionView.indexPathForItem(at: point)
         let visibleRect = CGRect(origin: collectionView.contentOffset, size: collectionView.bounds.size)
         let visiblePoint = CGPoint(x: visibleRect.midX, y: visibleRect.midY)
         guard let visibleIndexPath = collectionView.indexPathForItem(at: visiblePoint) else {return}

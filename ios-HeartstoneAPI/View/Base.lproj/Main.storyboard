@@ -64,7 +64,7 @@
                                         <rect key="frame" x="0.0" y="104" width="300" height="96"/>
                                         <state key="normal" backgroundImage="card">
                                             <attributedString key="attributedTitle">
-                                                <fragment content="Your Decks">
+                                                <fragment content="Favorite Cards">
                                                     <attributes>
                                                         <color key="NSColor" red="0.18382346629999999" green="0.1025367752" blue="0.058813266459999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <font key="NSFont" size="36" name="MarkerFelt-Thin"/>
@@ -73,6 +73,9 @@
                                                 </fragment>
                                             </attributedString>
                                         </state>
+                                        <connections>
+                                            <segue destination="jTr-g5-G0g" kind="show" id="htU-0Q-GHy"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -120,8 +123,28 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" springLoaded="YES" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="upI-sT-bMp">
+                                <rect key="frame" x="57" y="766" width="300" height="96"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="96" id="mc6-JI-ZMq"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="card">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Confirm">
+                                            <attributes>
+                                                <color key="NSColor" red="0.18382346629999999" green="0.1025367752" blue="0.058813266459999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <font key="NSFont" size="36" name="MarkerFelt-Thin"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <action selector="classSelectionButton:" destination="DuC-7g-j6J" eventType="touchUpInside" id="xvj-HD-zOt"/>
+                                </connections>
+                            </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="JbW-Tf-ef0">
-                                <rect key="frame" x="50" y="338" width="314" height="424"/>
+                                <rect key="frame" x="50" y="262" width="314" height="424"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="tQt-pu-mAj">
                                     <size key="itemSize" width="314" height="509"/>
@@ -156,39 +179,20 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" springLoaded="YES" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="upI-sT-bMp">
-                                <rect key="frame" x="57" y="766" width="300" height="96"/>
-                                <state key="normal" backgroundImage="card">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="Confirm">
-                                            <attributes>
-                                                <color key="NSColor" red="0.18382346629999999" green="0.1025367752" blue="0.058813266459999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <font key="NSFont" size="36" name="MarkerFelt-Thin"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                </state>
-                                <connections>
-                                    <action selector="classSelectionButton:" destination="DuC-7g-j6J" eventType="touchUpInside" id="xvj-HD-zOt"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="ZMx-TC-T2j" secondAttribute="bottom" id="4AK-7l-DET"/>
-                            <constraint firstItem="VEh-2l-lmK" firstAttribute="bottom" secondItem="JbW-Tf-ef0" secondAttribute="bottom" constant="100" id="5Li-eb-Ccg"/>
                             <constraint firstItem="VEh-2l-lmK" firstAttribute="trailing" secondItem="upI-sT-bMp" secondAttribute="trailing" constant="57" id="Cih-Pz-pZM"/>
-                            <constraint firstItem="JbW-Tf-ef0" firstAttribute="top" secondItem="AUA-wQ-BcB" secondAttribute="bottom" constant="137" id="L04-eg-kWB"/>
+                            <constraint firstItem="upI-sT-bMp" firstAttribute="top" secondItem="JbW-Tf-ef0" secondAttribute="bottom" constant="80" id="NZw-fN-V8P"/>
                             <constraint firstItem="VEh-2l-lmK" firstAttribute="trailing" secondItem="JbW-Tf-ef0" secondAttribute="trailing" constant="50" id="Nya-32-gwb"/>
                             <constraint firstItem="AUA-wQ-BcB" firstAttribute="centerX" secondItem="YYb-kh-Euh" secondAttribute="centerX" id="Qat-Se-zQT"/>
-                            <constraint firstItem="upI-sT-bMp" firstAttribute="top" secondItem="JbW-Tf-ef0" secondAttribute="bottom" constant="4" id="SAr-o6-2ux"/>
-                            <constraint firstItem="JbW-Tf-ef0" firstAttribute="top" secondItem="VEh-2l-lmK" secondAttribute="top" constant="250" id="XDg-vl-FaN"/>
                             <constraint firstItem="AUA-wQ-BcB" firstAttribute="top" secondItem="VEh-2l-lmK" secondAttribute="top" constant="60" id="esD-t3-qfL"/>
                             <constraint firstItem="ZMx-TC-T2j" firstAttribute="leading" secondItem="VEh-2l-lmK" secondAttribute="leading" id="jIv-eo-fbs"/>
                             <constraint firstItem="upI-sT-bMp" firstAttribute="leading" secondItem="VEh-2l-lmK" secondAttribute="leading" constant="57" id="jwG-6U-XHi"/>
                             <constraint firstItem="upI-sT-bMp" firstAttribute="bottom" secondItem="VEh-2l-lmK" secondAttribute="bottom" id="mEC-3I-pwu"/>
                             <constraint firstItem="JbW-Tf-ef0" firstAttribute="leading" secondItem="VEh-2l-lmK" secondAttribute="leading" constant="50" id="nhG-7s-zQQ"/>
+                            <constraint firstItem="JbW-Tf-ef0" firstAttribute="top" secondItem="AUA-wQ-BcB" secondAttribute="bottom" constant="61" id="ouj-1k-BVv"/>
                             <constraint firstItem="ZMx-TC-T2j" firstAttribute="top" secondItem="YYb-kh-Euh" secondAttribute="top" id="vl5-An-uHE"/>
                             <constraint firstItem="ZMx-TC-T2j" firstAttribute="trailing" secondItem="VEh-2l-lmK" secondAttribute="trailing" id="zt0-lJ-o5a"/>
                         </constraints>
@@ -203,6 +207,80 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1e1-T1-ZvZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="11.594202898550726" y="-266.51785714285711"/>
+        </scene>
+        <!--Deck View Controller-->
+        <scene sceneID="GVd-WN-aOh">
+            <objects>
+                <viewController id="jTr-g5-G0g" customClass="DeckViewController" customModule="ios_HeartstoneAPI" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BmB-VO-age">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg-all" translatesAutoresizingMaskIntoConstraints="NO" id="GOM-2W-URv">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                            </imageView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="fC1-d9-gOR">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="FSA-wF-9ly">
+                                    <size key="itemSize" width="181" height="268"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="2bh-z9-6VO" customClass="CardCollectionViewCell" customModule="ios_HeartstoneAPI" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="181" height="268"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="181" height="268"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="o65-xS-9VH">
+                                                    <rect key="frame" x="80.5" y="124" width="20" height="20"/>
+                                                </activityIndicatorView>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kyL-2T-KL8">
+                                                    <rect key="frame" x="0.0" y="0.0" width="181" height="268"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </imageView>
+                                            </subviews>
+                                        </view>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="kyL-2T-KL8" firstAttribute="top" secondItem="2bh-z9-6VO" secondAttribute="top" id="BeY-fo-Lry"/>
+                                            <constraint firstItem="o65-xS-9VH" firstAttribute="centerX" secondItem="2bh-z9-6VO" secondAttribute="centerX" id="FBf-c3-DUH"/>
+                                            <constraint firstItem="kyL-2T-KL8" firstAttribute="leading" secondItem="2bh-z9-6VO" secondAttribute="leading" id="Kf1-7c-n9A"/>
+                                            <constraint firstAttribute="bottom" secondItem="kyL-2T-KL8" secondAttribute="bottom" id="qeX-Jd-loE"/>
+                                            <constraint firstItem="o65-xS-9VH" firstAttribute="centerY" secondItem="2bh-z9-6VO" secondAttribute="centerY" id="sPG-el-bZy"/>
+                                            <constraint firstAttribute="trailing" secondItem="kyL-2T-KL8" secondAttribute="trailing" id="xUZ-OD-et7"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="cardImageView" destination="kyL-2T-KL8" id="5fA-h3-5yA"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="GOM-2W-URv" firstAttribute="leading" secondItem="TW5-Ja-ZkD" secondAttribute="leading" id="4RX-A5-x5K"/>
+                            <constraint firstItem="TW5-Ja-ZkD" firstAttribute="trailing" secondItem="GOM-2W-URv" secondAttribute="trailing" id="IzN-BU-eGc"/>
+                            <constraint firstItem="TW5-Ja-ZkD" firstAttribute="bottom" secondItem="fC1-d9-gOR" secondAttribute="bottom" id="KK4-W5-ob0"/>
+                            <constraint firstItem="GOM-2W-URv" firstAttribute="top" secondItem="BmB-VO-age" secondAttribute="topMargin" id="MQb-En-drn"/>
+                            <constraint firstAttribute="trailing" secondItem="fC1-d9-gOR" secondAttribute="trailing" id="Tgu-XL-dXB"/>
+                            <constraint firstItem="fC1-d9-gOR" firstAttribute="top" secondItem="TW5-Ja-ZkD" secondAttribute="top" id="i3R-sq-w5p"/>
+                            <constraint firstAttribute="bottom" secondItem="GOM-2W-URv" secondAttribute="bottom" id="iHM-X7-kgJ"/>
+                            <constraint firstItem="fC1-d9-gOR" firstAttribute="leading" secondItem="TW5-Ja-ZkD" secondAttribute="leading" id="naf-uf-9cO"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="TW5-Ja-ZkD"/>
+                    </view>
+                    <connections>
+                        <outlet property="favoriteCardCollectionView" destination="fC1-d9-gOR" id="PUh-r0-A83"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AW9-Tf-K2o" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-936.23188405797111" y="958.25892857142856"/>
         </scene>
         <!--Cards View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -272,11 +350,72 @@
                     </view>
                     <connections>
                         <outlet property="cardsCollectionView" destination="MQN-5Z-3hZ" id="vc4-FN-ywI"/>
+                        <segue destination="d0J-48-JnX" kind="show" identifier="cardDetails" id="iSa-8m-aU9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="12" y="433"/>
+        </scene>
+        <!--Card Details View Controller-->
+        <scene sceneID="xgv-m5-eia">
+            <objects>
+                <viewController id="d0J-48-JnX" customClass="CardDetailsViewController" customModule="ios_HeartstoneAPI" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="M6c-Oe-PCH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg-all" translatesAutoresizingMaskIntoConstraints="NO" id="CZg-YM-vYs">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MHN-aT-tL7">
+                                <rect key="frame" x="10" y="148" width="394" height="490"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" springLoaded="YES" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xfl-9F-hIc">
+                                <rect key="frame" x="57" y="695" width="300" height="96"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="96" id="8XM-2S-CmD"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="card">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Add to Favorite">
+                                            <attributes>
+                                                <color key="NSColor" red="0.18382346629999999" green="0.1025367752" blue="0.058813266459999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <font key="NSFont" size="36" name="MarkerFelt-Thin"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <action selector="classSelectionButton:" destination="DuC-7g-j6J" eventType="touchUpInside" id="VIJ-YP-FtX"/>
+                                    <action selector="saveCardToDeck:" destination="d0J-48-JnX" eventType="touchUpInside" id="zVc-vD-p8R"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="yzZ-vL-wus" firstAttribute="trailing" secondItem="CZg-YM-vYs" secondAttribute="trailing" id="0QV-nz-6Tj"/>
+                            <constraint firstItem="MHN-aT-tL7" firstAttribute="leading" secondItem="yzZ-vL-wus" secondAttribute="leading" constant="10" id="DjJ-nm-frh"/>
+                            <constraint firstItem="yzZ-vL-wus" firstAttribute="trailing" secondItem="Xfl-9F-hIc" secondAttribute="trailing" constant="57" id="HKF-9S-lbT"/>
+                            <constraint firstItem="yzZ-vL-wus" firstAttribute="bottom" secondItem="Xfl-9F-hIc" secondAttribute="bottom" constant="71" id="O1e-MJ-Y0u"/>
+                            <constraint firstItem="MHN-aT-tL7" firstAttribute="top" secondItem="yzZ-vL-wus" secondAttribute="top" constant="60" id="Sgh-C9-L7h"/>
+                            <constraint firstAttribute="bottom" secondItem="CZg-YM-vYs" secondAttribute="bottom" id="Vsk-Xx-SHI"/>
+                            <constraint firstItem="Xfl-9F-hIc" firstAttribute="leading" secondItem="yzZ-vL-wus" secondAttribute="leading" constant="57" id="Wf2-tx-rIg"/>
+                            <constraint firstItem="Xfl-9F-hIc" firstAttribute="top" secondItem="MHN-aT-tL7" secondAttribute="bottom" constant="57" id="Wpn-96-IYv"/>
+                            <constraint firstItem="CZg-YM-vYs" firstAttribute="leading" secondItem="yzZ-vL-wus" secondAttribute="leading" id="aIq-ZE-GLE"/>
+                            <constraint firstItem="CZg-YM-vYs" firstAttribute="top" secondItem="yzZ-vL-wus" secondAttribute="top" id="ceo-8H-hVM"/>
+                            <constraint firstItem="yzZ-vL-wus" firstAttribute="trailing" secondItem="MHN-aT-tL7" secondAttribute="trailing" constant="10" id="w8n-UK-b9o"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="yzZ-vL-wus"/>
+                    </view>
+                    <connections>
+                        <outlet property="cardImage" destination="MHN-aT-tL7" id="ikJ-Sp-FBo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YMY-0R-J7i" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1124.6376811594205" y="432.58928571428572"/>
         </scene>
     </scenes>
     <resources>

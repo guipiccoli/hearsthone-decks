@@ -19,6 +19,7 @@ class CardsViewController: UIViewController {
         super.viewDidLoad()
         
         cardsCollectionView.dataSource = self
+        cardsCollectionView.delegate = self
         
         if classSelected != nil {
             DataRequest.getCards(classCards: classSelected!) { (cards) in
@@ -57,6 +58,21 @@ extension CardsViewController: UICollectionViewDataSource {
        
         return cell
     }
+}
+
+extension CardsViewController: UICollectionViewDelegate {
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let cards = cards else {return}
+        guard let card: Card = cards[indexPath.row] else {return}
+        performSegue(withIdentifier: "cardDetails", sender: card)
+    }
     
-}            
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let cardDetails = segue.destination as? CardDetailsViewController {
+            if let cardSelected = sender as? Card {
+                cardDetails.cardSelected = cardSelected
+            }
+        }
+    }
+}
